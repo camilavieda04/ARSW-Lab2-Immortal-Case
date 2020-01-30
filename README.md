@@ -15,7 +15,7 @@
 
 	Consumo inicial sin modificaciones del programa.
 
-![consumo](https://user-images.githubusercontent.com/44879884/73458691-aa76be80-4343-11ea-9eff-c77be2b71d92.PNG)
+	![consumo](https://user-images.githubusercontent.com/44879884/73458691-aa76be80-4343-11ea-9eff-c77be2b71d92.PNG)
 
 	Reducción del consumo de CPU .
 
@@ -40,9 +40,8 @@
         }
     }	
 	```
-	
 	Modificación del Productor.
-
+	
 	``` java
 	@Override
     public void run() {
@@ -67,6 +66,6 @@
     }
 	```
 
-![ConsumoOptimo](https://user-images.githubusercontent.com/44879884/73458693-aa76be80-4343-11ea-94d4-d6a7ad3d682a.PNG)
+	![ConsumoOptimo](https://user-images.githubusercontent.com/44879884/73458693-aa76be80-4343-11ea-94d4-d6a7ad3d682a.PNG)
 
 3. Haga que el productor consuma muy rápido y el consumidor consume lentamente. Verifique que al establecer un pequeño límite para el 'stock', no haya un alto consumo de CPU o errores.
