@@ -32,15 +32,21 @@ public class Producer extends Thread {
     public void run() {
         while (true) {
             synchronized (queue) {
+                while(stockLimit == queue.size()){
+                    //Notifica que la cola llego al stockLimit
+                    queue.notifyAll();
+                    try {
+                        //Se queda esperando a que sea consumido
+                        queue.wait();
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Producer.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
                 dataSeed = dataSeed + rand.nextInt(100);
                 System.out.println("Producer added " + dataSeed);
                 queue.add(dataSeed);
+                //Notifica que agrego a la cola
                 queue.notifyAll();
-                try {
-                    queue.wait();
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Producer.class.getName()).log(Level.SEVERE, null, ex);
-                }
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException ex) {
