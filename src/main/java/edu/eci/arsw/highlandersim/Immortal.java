@@ -53,8 +53,9 @@ public class Immortal extends Thread {
                     }
                 }
             }
-
-            this.fight(im);
+            synchronized (immortalsPopulation){
+                this.fight(im);
+            }
 
             try {
                 Thread.sleep(1);
@@ -90,7 +91,6 @@ public class Immortal extends Thread {
 
     public void reload(Immortal i){
         isRun = true;
-        System.out.println("No entro gordo");
         synchronized (this){
             notifyAll();
         }
