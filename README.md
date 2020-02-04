@@ -104,5 +104,24 @@
 
 	![Captura2](https://user-images.githubusercontent.com/44879884/73511285-25c38900-43b3-11ea-9b11-81163b9fb394.PNG)
 
-
 ## Parte II
+
+1. Reglas del juego:
+   - Tenemos N jugadores inmortales. 
+   - Cada jugador conoce al jugador anterior (N-1).
+   - Cada jugador siempre esta atacando a otro inmortal. El jugador que ataque primero le resta M puntos a su oponente y aumenta sus puntos de vida en la misma cantidad. 
+   - No hay un solo ganador, lo más probable es que al final solo queden dos luchando indefinidamente eliminando y agregando puntos de vida. 
+   
+2. ¿Cuál debería ser el valor de la suma de los puntos de vida de todos los jugadores?
+   
+   El valor debería ser 100 * N cantidad de jugadores.
+   
+3. Ejecute la aplicación y verifique cómo funciona la opción pausar y verificar. ¿Se cumple el invariante?
+   
+   Ejecutamos la aplicación con 3 inmortales y al momento de ver la funcionalidad de la opción 'pausar y revisar' nos podemos dar cuenta que no se cumple el invariante ya que la suma de la vida total de todos los jugadores deberia ser en este caso de 300 y el resultado de la aplicación es 1000.
+   
+   ![Capture1](https://user-images.githubusercontent.com/48154086/73752599-3e270100-472f-11ea-8abe-882f51f58d80.PNG)
+   
+   
+   
+ 
