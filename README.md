@@ -201,12 +201,15 @@
 9. Una vez que se corrige el problema, rectifique que el programa continúa funcionando constantemente cuando se ejecutan 100, 1000 o 10000 inmortales. Si en estos casos grandes el invariante comienza a ser violado nuevamente, debe analizar lo que se hizo en el paso 4.
 
 Prueba #1 N = 100
+
 ![Capture5](https://user-images.githubusercontent.com/44879884/73858156-f030fc80-4805-11ea-878e-dd0f2744186b.PNG)
 
 Prueba #2 N = 1000
+
 ![Capture6](https://user-images.githubusercontent.com/44879884/73858284-25d5e580-4806-11ea-8a05-9b2999931a72.PNG)
 
 Prueba #3 N=10000
+
 ![Capture7](https://user-images.githubusercontent.com/44879884/73858390-50c03980-4806-11ea-8a4e-f65e0f585962.PNG)
 
 10. elemento molesto para la simulación es que en cierto momento hay pocos 'inmortales' vivos que pelean con 'inmortales' ya muertos. Es necesario suprimir a los muertos inmortales de la simulación a medida que mueren.
