@@ -88,9 +88,6 @@ public class ControlFrame extends JFrame {
         btnPauseAndCheck.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                /*
-				 * COMPLETAR
-                 */
                 int sum = 0;
                 for (Immortal im : immortals) {
                     im.parar(im);
@@ -105,13 +102,10 @@ public class ControlFrame extends JFrame {
 
         btnResume.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                /**
-                 * IMPLEMENTAR
-                 */
+
                 for (Immortal im : immortals) {
                     im.reload(im);
                 }
-
             }
         });
 
@@ -126,6 +120,17 @@ public class ControlFrame extends JFrame {
         numOfImmortals.setColumns(10);
 
         JButton btnStop = new JButton("STOP");
+
+        btnStop.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                for (Immortal im : immortals) {
+                    im.parar(im);
+                }
+            }
+        });
+
         btnStop.setForeground(Color.RED);
         toolBar.add(btnStop);
 
